@@ -10,7 +10,7 @@
 # _development_.
 .PHONY: run-app
 run-app: set-build-info
-	export DCOMP_CONBENCH_HOST_PORT=127.0.0.1:5000 && \
+	export DCOMP_CONBENCH_HOST_PORT=0.0.0.0:5000 && \
 		docker compose down && docker compose up --build
 
 
