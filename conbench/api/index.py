@@ -206,7 +206,7 @@ if Config.TESTING:
     @api.route("/wipe-db", methods=("GET",))
     def wipe_db():
         log.info("clear DB tables")
-        empty_db_tables()
+        #empty_db_tables()
         return "200 OK", 200
 
     @api.route("/raise-httperr", methods=("GET",))
