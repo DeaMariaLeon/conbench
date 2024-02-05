@@ -37,8 +37,8 @@ services:
       DB_NAME: "postgres"
       DB_PORT: "5432"
       FLASK_APP: "conbench"
-      FLASK_ENV: "development"
-      FLASK_DEBUG: "true"
+      FLASK_ENV: ""
+      FLASK_DEBUG: "false"
       REGISTRATION_KEY: "first-try-4567812!"
       SECRET_KEY: "Person, woman, man, camera, TV"
       # Default log level is INFO, change to DEBUG as needed.
@@ -48,6 +48,7 @@ services:
       GOOGLE_CLIENT_SECRET: AnotherStaticSecret
       CONBENCH_OIDC_ISSUER_URL: http://dex:5556/dex-for-conbench
       CONBENCH_INTENDED_BASE_URL: http://127.0.0.1:5000/
+      #CONBENCH_INTENDED_BASE_URL: https://pandas.pydata.org/benchmarks/conbench/
       GITHUB_API_TOKEN: $GITHUB_API_TOKEN
     healthcheck:
       test: "curl -sfS http://0.0.0.0:5000/api/ping/"
